@@ -78,4 +78,10 @@ public class UserRegisterController {
 		UserRegister byname = userRegisterService.findUsername(firstName);
 		return new ResponseEntity<>(byname, HttpStatus.OK);
 	}
+	
+	@PostMapping("/registerAll")
+	public ResponseEntity<List<UserRegister>> registerAll(@RequestBody List<UserRegister> register){
+		List<UserRegister> registerAll = userRegisterService.registerAll(register);
+		return new ResponseEntity<>(registerAll,HttpStatus.OK);
+	}
 }

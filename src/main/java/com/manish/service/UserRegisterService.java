@@ -28,6 +28,6 @@ public interface UserRegisterService {
     
     String login(UserRegister user);
     
-    
+    public List<UserRegister> registerAll(List<UserRegister> users);
     
 }
